@@ -54,14 +54,9 @@ This repository contains **GM/ID extraction data** and related scripts to get st
 
 ## **Usage**
 1. **To run a specific extraction**:  
-   Modify the parameters in the `run_extraction.py` script and execute:  
+   Run the `NMOS-LVT.py` script for example and execute:  
    ```bash
-   python gmid_generation_scripts/run_extraction.py
-   ```
-
-2. **To clean up temporary files**:  
-   ```bash
-   python gmid_generation_scripts/cleanup.py
+   python gmid Python Scipts/gmid_python scripts/sky130/NMOS-LVT.py
    ```
 
 ---
@@ -69,18 +64,15 @@ This repository contains **GM/ID extraction data** and related scripts to get st
 ## **Dependencies**
 - Python 3.x
 - Matplotlib
-- Sky130 PDK
 
 Make sure to install all dependencies using:  
 ```bash
-pip install -r requirements.txt
+   pip install matplotlib numpy pandas
 ```
 
 ---
 
 ## **Troubleshooting**
-- **Q**: I get an error about missing Sky130 PDK.  
-  **A**: Ensure the PDK is installed and properly configured in your environment.
 
 - **Q**: Plots are not generated.  
   **A**: Verify that all scripts are correctly pointed to the data files.
@@ -93,12 +85,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ## **Contributors**
-- **Chennakeshavadasa** (https://github.com/chennakeshavadasa)  
+- **Nithin P** (https://github.com/chennakeshavadasa)
+- Special Thanks to [Soumya Kanta Rana](https://www.linkedin.com/in/soumya-rana/) for the schematic files.
 
 ---
-
-## **Feedback and Contributions**
-Feel free to raise issues or contribute to the repository by opening pull requests. Feedback and suggestions are welcome!
-```
-
-You can copy this entire block and paste it into your `README.md` file. If you need any further modifications or additional content, let me know!
