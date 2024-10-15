@@ -1,6 +1,6 @@
 
 # **gmid_SKY130**  
-This repository contains **GM/ID extraction data** and related scripts using the **Sky130 PDK**. It enables users to perform circuit simulations, extract key transistor parameters, and generate insightful plots quickly and efficiently.  
+This repository contains **GM/ID extraction data** and related scripts to get started with gm/id based design using the **Sky130 PDK**. It enables users to perform circuit simulations, extract key transistor parameters, and generate insightful plots quickly and efficiently.  
 
 ---
 
