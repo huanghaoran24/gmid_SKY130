@@ -29,7 +29,8 @@ This repository contains **GM/ID extraction data** and related scripts to get st
    ```
 5. **Define the File Path in python Scripts**:
    ```
-   path = r"C:PATH"
+   path = path = r"C:\Users\USERNAME\Downloads\SKY130\nfet3_01v8_lvt\\"
+
    ```   
 
 ---
