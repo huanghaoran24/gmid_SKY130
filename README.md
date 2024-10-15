@@ -27,6 +27,10 @@ This repository contains **GM/ID extraction data** and related scripts to get st
    ```bash
    pip install matplotlib numpy pandas
    ```
+5. **Define the File Path in python Scripts**:
+   ```
+   path = r"C:PATH"
+   ```   
 
 ---
 
