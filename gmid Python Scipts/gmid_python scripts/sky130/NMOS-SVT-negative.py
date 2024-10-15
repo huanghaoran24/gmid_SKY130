@@ -4,7 +4,7 @@ import numpy as np
 
 
 # Define the path to the directory
-path = r"C:\Users\NITHIN P\Downloads\SKY130\nfet3_01v8_svt\\"
+path = r"C:PATH"
 
 # Initialize lists for storing results
 vgs = [[] for _ in range(13)]
