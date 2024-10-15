@@ -25,7 +25,7 @@ This repository contains **GM/ID extraction data** and related scripts to get st
 
 4. **Install dependencies**:  
    ```bash
-   pip install -r requirements.txt
+   pip install matplotlib numpy pandas
    ```
 
 ---
