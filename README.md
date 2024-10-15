@@ -74,14 +74,6 @@ Make sure to install all dependencies using:
    pip install matplotlib numpy pandas
 ```
 
----
-
-## **Troubleshooting**
-
-- **Q**: Plots are not generated.  
-  **A**: Verify that all scripts are correctly pointed to the data files.
-
----
 
 ## **License**
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
