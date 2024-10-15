@@ -46,7 +46,7 @@ This repository contains **GM/ID extraction data** and related scripts to get st
 ---
 
 ## **Folder Structure**
-- `designs/`: Contains circuit design files.
+- `designs/`: Contains circuit design files If you are interested How I extracted it or Simply skip to **Usage**
 - `gmid Data/`: GM/ID extracted data.
 - `gmid_generation_scripts/`: Scripts to generate plots and perform data analysis.
 
