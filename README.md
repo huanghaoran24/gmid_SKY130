@@ -28,8 +28,9 @@ This repository contains **GM/ID extraction data** and related scripts to get st
    pip install matplotlib numpy pandas
    ```
 5. **Define the File Path in python Scripts**:
+    For Example,
    ```
-   path = path = r"C:\Users\USERNAME\Downloads\SKY130\nfet3_01v8_lvt\\"
+   path = r"C:\Users\USERNAME\Downloads\SKY130\nfet3_01v8_lvt\\"
 
    ```   
 
