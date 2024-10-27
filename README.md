@@ -49,12 +49,6 @@ This repository contains **GM/ID extraction data** and related Interactive scrip
 
 ---
 
-## **Folder Structure**
-- `gmid Data/`: GM/ID extracted data.
-- `gmid Python Scipts/`: Scripts to generate plots and perform data analysis.
-
----
-
 ## **Usage**
 1. **To run a specific extraction**:  
    Run the `NMOS-LVT.py` script for example and execute:  
