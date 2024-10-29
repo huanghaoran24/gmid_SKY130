@@ -58,15 +58,6 @@ This repository contains **GM/ID extraction data** and related Interactive scrip
 
 ---
 
-## **Dependencies**
-- Python 3.x
-- Matplotlib
-- Numpy
-
-Make sure to install all dependencies using:  
-```bash
-   pip install matplotlib numpy pandas
-```
 
 - Special Thanks to [**Soumya Kanta Rana**](https://www.linkedin.com/in/soumya-rana/) for the schematic files.
 
