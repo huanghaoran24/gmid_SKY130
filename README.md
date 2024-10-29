@@ -68,7 +68,6 @@ Make sure to install all dependencies using:
    pip install matplotlib numpy pandas
 ```
 
-## **Contributors**
 - Special Thanks to [**Soumya Kanta Rana**](https://www.linkedin.com/in/soumya-rana/) for the schematic files.
 
 ---
