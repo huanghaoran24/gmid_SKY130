@@ -16,18 +16,11 @@ This repository contains **GM/ID extraction data** and related Interactive scrip
    cd gmid_SKY130
    ```
 
-3. (Optional) **Create a virtual environment**:  
-   ```bash
-   python -m venv env
-   source env/bin/activate  # For Linux/macOS
-   .\\env\\Scripts\\activate  # For Windows
-   ```
-
-4. **Install dependencies**:  
+3. **Install dependencies**:  
    ```bash
    pip install matplotlib numpy pandas
    ```
-5. **Define the File Path in python Scripts**:
+4. **Define the File Path in python Scripts**:
     For Example,
    ```
    path = r"C:\Users\USERNAME\Downloads\SKY130\nfet3_01v8_lvt\\"
