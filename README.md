@@ -55,5 +55,3 @@ This repository contains **GM/ID extraction data** and related Interactive scrip
 - Special Thanks to [**Soumya Kanta Rana**](https://www.linkedin.com/in/soumya-rana/) for the Test Bench.
 
 ---
-**Note**: I have added the extraction data of just SVT and LVT Devices for now. I'll add the data of others later..
-
