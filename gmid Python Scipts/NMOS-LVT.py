@@ -3,7 +3,7 @@ from matplotlib.widgets import CheckButtons  # type: ignore
 import numpy as np
 
 # Define the path to the directory
-path = r"C:PATH\\"
+path = r"C:\Users\10694\Desktop\gmid_SKY130\gmid Data\nfet3_01v8_lvt\\"
 
 # Initialize lists for storing results
 vgs = [[] for _ in range(13)]
@@ -132,22 +132,82 @@ def plot_with_checkboxes(x_data, y_data, x_label, y_label, title):
     plt.show()
 
 # Plot gm/id versus Vgs
-plot_with_checkboxes(vgs, gm_id, 'Vgs', 'gm/id', 'NMOS-LVT gm/id versus Vgs')
+# plot_with_checkboxes(vgs, gm_id, 'Vgs', 'gm/id', 'NMOS-LVT gm/id versus Vgs')
 
 # Plot gm/id versus Vov
-plot_with_checkboxes(Vov, gm_id, 'Vov', 'gm/id', 'NMOS-LVT gm/id versus Vov')
+# plot_with_checkboxes(Vov, gm_id, 'Vov', 'gm/id', 'NMOS-LVT gm/id versus Vov')
 
 # Plot gm/gds versus gm/id
-plot_with_checkboxes(gm_id, gm_gds, 'gm/id', 'gm/gds', 'NMOS-LVT gm/gds versus gm/id')
+# plot_with_checkboxes(gm_id, gm_gds, 'gm/id', 'gm/gds', 'NMOS-LVT gm/gds versus gm/id')
 
 # Plot id/W versus gm/id
-plot_with_checkboxes(gm_id, id_W, 'gm/id', 'id/W', 'NMOS-LVT id/W versus gm/id')
+# plot_with_checkboxes(gm_id, id_W, 'gm/id', 'id/W', 'NMOS-LVT id/W versus gm/id')
 
 # Plot ft = gm / Cgg versus gm/id
-plot_with_checkboxes(gm_id, ft, 'gm/id', 'ft (Hz)', 'NMOS-LVT ft versus gm/id')
+# plot_with_checkboxes(gm_id, ft, 'gm/id', 'ft (Hz)', 'NMOS-LVT ft versus gm/id')
 
 # Plot Cgd / Cgg versus gm/id
-plot_with_checkboxes(gm_id, cgd_cgg, 'gm/id', 'Cgd / Cgg', 'NMOS-LVT Cgd / Cgg versus gm/id')
+# plot_with_checkboxes(gm_id, cgd_cgg, 'gm/id', 'Cgd / Cgg', 'NMOS-LVT Cgd / Cgg versus gm/id')
 
 # Plot Cgs / Cgg versus gm/id
-plot_with_checkboxes(gm_id, cgs_cgg, 'gm/id', 'Cgs / Cgg', 'NMOS-LVT Cgs / Cgg versus gm/id')
+# plot_with_checkboxes(gm_id, cgs_cgg, 'gm/id', 'Cgs / Cgg', 'NMOS-LVT Cgs / Cgg versus gm/id')
+# ... existing code ...
+
+# 添加一个函数用于根据给定的gm/id、id和L值求解W
+def calculate_W(target_gmid, target_id, target_L):
+    """
+    根据给定的gm/id、id和L值计算所需的晶体管宽度W
+    
+    参数:
+    target_gmid: 目标gm/id值
+    target_id: 目标漏极电流id值 (A)
+    target_L: 目标晶体管长度 (如 '0.15u', '1u' 等)
+    
+    返回:
+    W: 计算得到的晶体管宽度 (m)
+    """
+    # 查找目标L在labels中的索引
+    if target_L not in labels:
+        raise ValueError(f"目标长度 {target_L} 不在可用长度列表中: {labels}")
+    
+    L_index = labels.index(target_L)
+    
+    # 获取该长度下的gm/id和id/W数据
+    gmid_data = gm_id[L_index]
+    idW_data = id_W[L_index]
+    
+    # 检查目标gm/id是否在数据范围内
+    if target_gmid < min(gmid_data) or target_gmid > max(gmid_data):
+        raise ValueError(f"目标gm/id值 {target_gmid} 超出了数据范围 [{min(gmid_data)}, {max(gmid_data)}]")
+    
+    # 找到最接近目标值的gm/id索引
+    closest_idx = min(range(len(gmid_data)), key=lambda i: abs(gmid_data[i] - target_gmid))
+    
+    # 获取对应的id/W值
+    target_idW = idW_data[closest_idx]
+    
+    # 计算所需的W值
+    W = target_id / target_idW
+    
+    return W
+
+# 示例使用
+if __name__ == "__main__":
+    # 绘制图表
+    plot_with_checkboxes(gm_id, id_W, 'gm/id', 'id/W', 'NMOS-LVT id/W versus gm/id')
+    
+    # 示例：计算W
+    try:
+        # 示例参数
+        example_gmid = 15  # 目标gm/id值
+        example_id = 10e-6  # 目标电流，例如10μA
+        example_L = '0.15u'  # 目标长度
+        
+        calculated_W = calculate_W(example_gmid, example_id, example_L)
+        print(f"\n计算结果:")
+        print(f"对于 gm/id = {example_gmid}, Id = {example_id*1e6:.2f}μA, L = {example_L}")
+        print(f"计算得到的晶体管宽度 W = {calculated_W*1e6:.2f}μm")
+    except Exception as e:
+        print(f"计算过程中出错: {e}")
+
+# ... existing code ...
